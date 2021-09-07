@@ -33,7 +33,7 @@ new column it will fill the new column with null values in dataframe.
 
 * **Parameters**
 
-    **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
+   * **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
 
 
 
@@ -47,7 +47,7 @@ Gets list of all the column from the given instruction and drops them from the d
 
 * **Parameters**
 
-    **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
+   * **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
 
 
 
@@ -67,7 +67,7 @@ in registry which contains all the necessary required variables.
 >
 * **Parameters**
 
-    **registry** -  Registry that contains the current instructions and all other job parameter’s.
+   * **registry** -  Registry that contains the current instructions and all other job parameter’s.
 
 
 
@@ -85,7 +85,7 @@ Function that perfom the specific type of join operations between the dataframes
 
 * **Parameters**
 
-    **registry** - Registry that contains the current instructions, dataframes and all other job parameter’s.
+  *  **registry** - Registry that contains the current instructions, dataframes and all other job parameter’s.
 
 
 
@@ -107,7 +107,7 @@ dev.
 > 
 * **Parameters**
 
-    **registry** -   Registry that contains the current instructions, dataframes, results and all other job parameter’s.
+   * **registry** -   Registry that contains the current instructions, dataframes, results and all other job parameter’s.
 
 
 
@@ -121,7 +121,7 @@ Function that will add the hashing key in the registry from the instructions.
 
 * **Parameters**
 
-    **registry** - Registry that contains the current instructions and all other job parameter’s.
+   * **registry** - Registry that contains the current instructions and all other job parameter’s.
 
 
 
@@ -134,7 +134,7 @@ Gets the rename column instruction from the current instruction i.e old column n
 
 * **Parameters**
 
-    **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
+   * **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
 
 
 
@@ -149,7 +149,7 @@ instruction and based on the given transformation it will transform the given da
 
 * **Parameters**
 
-    **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
+  *  **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
 
 
 
@@ -171,4 +171,4 @@ instruction name.
 
 * **Parameters**
 
-    **registry** -  Registry that contains the current instructions, results space and all other job parameter’s.
+   * **registry** -  Registry that contains the current instructions, results space and all other job parameter’s.
