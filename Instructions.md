@@ -31,9 +31,9 @@ new column it will fill the new column with null values in dataframe.
     [ “new_column_1” : {}, “new_column_2”: { default : Some_Value, datatype : string } ]
 
 
-* **Parameters**
+>* **Parameters**
 
-   * **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
+>  * **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
 
 
 
@@ -65,9 +65,9 @@ in registry which contains all the necessary required variables.
     “intermediate” , ” is_unioned ”: True }}
 
 >
-* **Parameters**
+>* **Parameters**
 
-   * **registry** -  Registry that contains the current instructions and all other job parameter’s.
+>   * **registry** -  Registry that contains the current instructions and all other job parameter’s.
 
 
 
@@ -83,9 +83,9 @@ Function that perfom the specific type of join operations between the dataframes
     }
 
 
-* **Parameters**
+>* **Parameters**
 
-  *  **registry** - Registry that contains the current instructions, dataframes and all other job parameter’s.
+>  *  **registry** - Registry that contains the current instructions, dataframes and all other job parameter’s.
 
 
 
@@ -105,9 +105,9 @@ dev.
     }
 
 > 
-* **Parameters**
+>* **Parameters**
 
-   * **registry** -   Registry that contains the current instructions, dataframes, results and all other job parameter’s.
+>   * **registry** -   Registry that contains the current instructions, dataframes, results and all other job parameter’s.
 
 
 
@@ -119,9 +119,9 @@ Function that will add the hashing key in the registry from the instructions.
     * kyjf - Hashing key
 
 
-* **Parameters**
+>* **Parameters**
 
-   * **registry** - Registry that contains the current instructions and all other job parameter’s.
+>   * **registry** - Registry that contains the current instructions and all other job parameter’s.
 
 
 
@@ -132,9 +132,9 @@ Gets the rename column instruction from the current instruction i.e old column n
     { “old_column_name” : “new_column_name”, “old_column_name_2” : “new_column_name_2” }
 
 
-* **Parameters**
+>* **Parameters**
 
-   * **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
+>   * **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
 
 
 
@@ -147,9 +147,9 @@ instruction and based on the given transformation it will transform the given da
     {“date_to_string”: {“entry_date”: { “entry_date_new”: “ddMMyyyy” }}, “deduplicate” : “all”}
     
 
-* **Parameters**
+>* **Parameters**
 
-  *  **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
+>  *  **registry** – Registry that contains the current instructions, dataframes and all other job parameter’s.
 
 
 
@@ -169,6 +169,6 @@ instruction name.
     }
 
 
-* **Parameters**
+>* **Parameters**
 
-   * **registry** -  Registry that contains the current instructions, results space and all other job parameter’s.
+>   * **registry** -  Registry that contains the current instructions, results space and all other job parameter’s.
