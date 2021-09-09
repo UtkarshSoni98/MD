@@ -5,29 +5,29 @@
 Bases: `object`
 
 
-#### checkReserve(key)
+#### check_reserve(key)
 Checks whether the key is reserved for registry or not
 
 
 * **Parameters**
 
-    * **key** – Input Key for registry
+    **key** – Input Key for registry
 
 
 
 * **Returns**
 
-    True if the key is alredy reserved otherwise False
+    True if the key is already reserved otherwise False
 
 
 
-#### checkSecurityType(security)
+#### check_security_type(security)
 Checks the datatype for security
 
 
 * **Parameters**
 
-   * **security** – Input value for setting the security.
+    * **security** – Input value for setting the security.
 
 
 
@@ -43,11 +43,11 @@ Empty the given space
 
 * **Parameters**
 
-   * **space** – Name of the Space
+    * **space** – Name of the Space
 
 
 
-#### createSpace(space, value=None, security=False)
+#### create_space(space, value=None, security=False)
 Creates the space in the registry
 
 
@@ -66,7 +66,7 @@ Removes the key and value from the given space if it is not reserved
 
 
 * **Parameters**
- 
+
     * **key** – Name of the key
 
     * **space** – Name of the Space
@@ -78,7 +78,7 @@ Gets the value of the key from the given space
 
 
 * **Parameters**
-    
+  
     * **key** – Name of the key
 
     * **space** – Name of the Space
@@ -91,23 +91,13 @@ Gets the value of the key from the given space
 
 
 
-#### getReservedKeywords()
-Get the reserved keywords from registry and returns a copy
-
-
-* **Returns**
-
-    Copy of the revserved keywords in the registry
-
-
-
-#### getall(space=None)
+#### get_all(space=None)
 Gets complete data from the given space
 
 
 * **Parameters**
 
-  *  **space** – Name of the space
+    * **space** – Name of the space
 
 
 
@@ -117,13 +107,23 @@ Gets complete data from the given space
 
 
 
-#### isSecure(space)
+#### get_reserved_keywords()
+Get the reserved keywords from registry and returns a copy
+
+
+* **Returns**
+
+    Copy of the reserved keywords in the registry
+
+
+
+#### is_secure(space)
 Checks whether the given space is secured or not
 
 
 * **Parameters**
 
-  *  **space** – Name of the space
+    * **space** – Name of the space
 
 
 
@@ -138,7 +138,7 @@ Adds new data to the given space
 
 
 * **Parameters**
- 
+  
     * **key** – Key of the data by which we can access later
 
     * **value** – Value of the data
@@ -153,22 +153,22 @@ Adds new data to the given space
 
 
 
-#### setSecurity(space, security)
+#### set_security(space, security)
 Sets the security of the space
 
 
 * **Parameters**
-
+  
     * **space** – Name of the space
 
     * **security** – Security of the space whether we need the space to be secure or not
 
 
 
-#### setSpace(space)
+#### set_space(space)
 Sets the default space to the given space in registry
 
 
 * **Parameters**
 
-   * **space** – Name of the space
+    * **space** – Name of the space

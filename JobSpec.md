@@ -8,11 +8,11 @@ Bases: `object`
 #### registry( = <Registry.Registry object>)
 
 #### run()
-Function that will handel the overall execution of the jobspec
+Handles the overall execution of the jobspec
 
 
 #### setup(space, value=None, security=False)
-Initial setup that will create a space in registry with some values and security if passed as arguments otherwise it will create a blank space with no security.
+Initial setup to create a space in registry with some values and security if passed as arguments otherwise it will create a blank space with no security
 
 
 * **Parameters**

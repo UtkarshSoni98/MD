@@ -5,13 +5,14 @@
 Bases: `object`
 
 
+
 #### all_other_values(registry)
 Get all other value of the column from the input file
 
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -27,7 +28,7 @@ Get count of all other values of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+   *  **registry** – The registry with all the job parameters
 
 
 
@@ -41,13 +42,33 @@ Get count of all other values of the column from the input file
 Fetches the column name
 
 
+* **Parameters**
+
+   *  **registry** – The registry with all the job parameters
+
+
+
 * **Returns**
 
-    Returns the column name
+    Column name
 
 
 
 #### datatypes(registry)
+Gets the datatype of each column from the input file
+
+
+* **Parameters**
+
+   *  **registry** – The registry with all the job parameters
+
+
+
+* **Returns**
+
+    Datatype of given column
+
+
 
 #### distinct_count(registry)
 Gets the distinct count of the column from the input file
@@ -55,7 +76,7 @@ Gets the distinct count of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -71,7 +92,7 @@ Get count of false values of the column of boolean datatype from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -87,7 +108,7 @@ Gets the maximum value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -103,7 +124,7 @@ Gets the average value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -119,7 +140,7 @@ Gets the median value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -135,7 +156,7 @@ Gets the minimum value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -151,7 +172,7 @@ Gets the mode value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -167,7 +188,7 @@ Get count of null values of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -183,7 +204,7 @@ Gets the top 1st value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -199,7 +220,7 @@ Get count of the top 1st value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -215,7 +236,7 @@ Gets the top 2nd value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -231,7 +252,7 @@ Get count of the top 2nd value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -247,7 +268,7 @@ Gets the top 3rd value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -263,7 +284,7 @@ Get count of the top 3rd value of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -274,18 +295,18 @@ Get count of the top 3rd value of the column from the input file
 
 
 #### total_count(registry)
-Gets the column counts of each column from the input file.
+Gets the column counts of each column from the input file
 
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters.
+    * **registry** – The registry with all the job parameters
 
 
 
 * **Returns**
 
-    Total count of given column.
+    Total count of given column
 
 
 
@@ -295,7 +316,7 @@ Get count of true values of the column of boolean datatype from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -311,7 +332,7 @@ Gets the unique count of the column from the input file
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 

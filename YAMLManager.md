@@ -8,10 +8,12 @@ Bases: `object`
 #### parse_yaml(registry)
 Read and parse the YAML file
 
+> Registry requirements: job_spec_path
+
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 

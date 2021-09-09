@@ -18,16 +18,13 @@ Executes the complete metadata job via managing multiple functions calls
 
 
 #### setup(space, value=None, security=False)
-Creates the given space in registry
+Initial setup that will create a space in registry with some values and security if passed as arguments otherwise it will create a blank space with no security.
 
 
 * **Parameters**
 
-    
     * **space** – Name of the space
 
-
     * **value** – Value of the space
-
 
     * **security** – Security for the space

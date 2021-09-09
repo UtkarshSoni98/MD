@@ -8,75 +8,78 @@ Bases: `object`
 #### AWSManager( = <AWSManager.AWSManager object>)
 
 #### hash_sha256_string(string)
-Function that will hash the given string using sha256 hashsing
+Hashes the given string using sha256 hashing
 
 
 * **Parameters**
 
-    * **string** – A set of characters to hash
+   * **string** – A set of characters to hash
 
 
 
 * **Returns**
 
-    Returns a new hashed string
+    A new hashed string
 
 
 
-#### pii_hash_email(input_column, input_df, registry)
-Hashes the teacher column
+#### pii_hash_email(input_dictionary, dataframe, registry)
+Hashes the email column
+> Registry requirements: bucket, pii_hash_prefix
+
+
+* **Parameters**
+
+    * **input_dictionary** – A dictionary with the column name which has to hashed and the new hashed column name
+
+    * **dataframe** – Dataframe which contains all the data in a tabular format
+
+    * **registry** – Registry that contains the bucket, pii_hash_prefix, along with all other job parameters
+
+
+
+* **Returns**
+
+    Dataframe with the hashed email column
+
+
+
+#### pii_hash_student(input_dictionary, dataframe, registry)
+Hashes the student column
+> Registry requirements: bucket, pii_hash_prefix
 
 
 * **Parameters**
     
-    * **input_column** – input_column will have the column which has to hashed and the hashed column name
+    * **input_dictionary** – A dictionary with the column name which has to hashed and the new hashed column name
 
-    * **input_df** – input_column dataframe having all the data from input_column file
+    * **dataframe** – Dataframe which contains all the data in a tabular format
 
-    * **registry** – The registry with all the job parameters
-
-
-
-* **Returns**
-
-    Returns the dataframe with hashed email column
-
-
-
-#### pii_hash_student(input_column, input_df, registry)
-Hashes the student column
-
-
-* **Parameters**
-
-    * **input_column** – input_column will have the column which has to hashed and the hashed column name
-
-    * **input_df** – input_column dataframe having all the data from input_column file
-
-    * **registry** – The registry with all the job parameters
+    * **registry** – Registry that contains the bucket, pii_hash_prefix, along with all other job parameters
 
 
 
 * **Returns**
 
-    Returns the dataframe with hashed student column
+    Dataframe with the hashed student column
 
 
 
-#### pii_hash_teacher(input_column, input_df, registry)
+#### pii_hash_teacher(input_dictionary, dataframe, registry)
 Hashes the teacher column
+> Registry requirements: bucket, pii_hash_prefix
 
 
 * **Parameters**
 
-    * **input_column** – input_column will have the column which has to hashed and the hashed column name
+    * **input_dictionary** – A dictionary with the column name which has to hashed and the new hashed column name
 
-    * **input_df** – input_column dataframe having all the data from input_column file
+    * **dataframe** – Dataframe which contains all the data in a tabular format
 
-    * **registry** – The registry with all the job parameters
+    * **registry** – Registry that contains the bucket, pii_hash_prefix, along with all other job parameters
 
 
 
 * **Returns**
 
-    Returns the dataframe with hashed teacher column
+    Dataframe with the hashed teacher column
