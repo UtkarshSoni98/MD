@@ -10,7 +10,7 @@ Add key and value in the json object
 
 
 * **Parameters**
-   
+
     * **key** – Key of dictionary
 
     * **value** – Value of key
@@ -25,19 +25,21 @@ Add key and value in the json object
 
 
 
-#### prepare_result_for_json(result, output_file, manifest_file, input_file, registry)
+#### prepare_result_for_json(result, output_file_path, manifest_file, input_file, registry)
 Generates json dictionary for the jobspec results
+
+> Registry requirements: environment, customer_slug, current_timestamp, job_spec_path
 
 
 * **Parameters**
- 
+    
     * **result** – Complete results of validations
 
-    * **output_file** – File path of generated file.
+    * **output_file_path** – File path of generated file.
 
     * **manifest_file** – Json generated manifest
 
-    * **input_file** – Input file path
+    * **input_file** – input file path
 
     * **registry** – The registry with all the job parameters
 
@@ -45,7 +47,7 @@ Generates json dictionary for the jobspec results
 
 * **Returns**
 
-    Json dictionary with complete status of jobspec.
+    Json data with all the results.
 
 
 
@@ -69,4 +71,4 @@ Generates json dictionary for the metadata results
 
 * **Returns**
 
-    Json dictionary with complete status of jobspec
+    Json data with all the results.

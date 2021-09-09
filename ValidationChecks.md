@@ -5,61 +5,13 @@
 Bases: `object`
 
 
-#### DD_is_greater_than(alert_result, df, column, value)
-
-* **Parameters**
-
-    
-    * **alert_result** – 
-
-
-    * **df** – 
-
-
-    * **column** – 
-
-
-    * **value** – 
-
-
-
-* **Returns**
-
-    
-
-
-#### MM_is_greater_than(alert_result, df, column, value)
-
-* **Parameters**
-
-    
-    * **alert_result** – 
-
-
-    * **df** – 
-
-
-    * **column** – 
-
-
-    * **value** – 
-
-
-
-* **Returns**
-
-    
-
-
 #### check_if_column_exists(dataframe, column)
 Checks if column is present in the dataframe or not
 
 
 * **Parameters**
 
-    
     * **dataframe** – The input dataframe with all the data from input file
-
 
     * **column** – The column to be checked for its presence in the dataframe
 
@@ -77,7 +29,7 @@ Checks whether overall result is fail or pass
 
 * **Parameters**
 
-    **result** – Overall result i.e result after validation__pre and validation__post
+    * **result** – Overall result i.e result after validation__pre and validation__post
 
 
 
@@ -93,15 +45,11 @@ Checks whether the given file is present back in time or not based on the limit
 
 * **Parameters**
 
-    
     * **file_exists_path** – Current file path
-
 
     * **filename** – Name of the file
 
-
     * **input_directory** – Source folder of the file
-
 
     * **registry** – The registry with all the job parameters
 
@@ -114,36 +62,34 @@ Checks whether the given file is present back in time or not based on the limit
 
 
 #### compare(\*args)
+Compares if the data in one column with another column using relational operators
+
 
 * **Parameters**
 
-    **args** – 
+    * **args** – Columns that are to be compared and the operator used for comparison
 
 
 
 * **Returns**
 
-    
+    Returns Fail if the comparison is not satisfied, Pass if the comparison is satisfied
 
 
-#### date_dd(alert_result, df, column, operator, value)
+
+#### date_dd(alert_result, dataframe, column, operator, value)
 Compares the dd of the date with the value
 
 
 * **Parameters**
 
-    
     * **alert_result** – Result of each function
 
-
-    * **df** – Dataframe containing the column on which the comparison should happen
-
+    * **dataframe** – Dataframe containing the column on which the comparison should happen
 
     * **column** – Column on which the comparison should happen
 
-
     * **operator** – Different types of relational operators
-
 
     * **value** – Numeric value
 
@@ -156,36 +102,34 @@ Compares the dd of the date with the value
 
 
 #### date_difference(\*args)
+Compares the date difference between two columns and a specific value using relational operators
+
 
 * **Parameters**
 
-    **args** – 
+    * **args** – Date columns that are to be compared, the operator used for comparison and the specific value
 
 
 
 * **Returns**
 
-    
+    Returns Fail if the comparison is not satisfied, Pass if the comparison is satisfied
 
 
-#### date_mm(alert_result, df, column, operator, value)
+
+#### date_mm(alert_result, dataframe, column, operator, value)
 Compares the mm of the date with the value
 
 
 * **Parameters**
-
     
     * **alert_result** – result of each function
 
-
-    * **df** – dataframe containing the column on which the comparison should happen
-
+    * **dataframe** – dataframe containing the column on which the comparison should happen
 
     * **column** – column on which the comparison should happen
 
-
     * **operator** – different types of relational operators
-
 
     * **value** – numeric value
 
@@ -198,37 +142,34 @@ Compares the mm of the date with the value
 
 
 #### if_result(alert_result, dataframe, column, value)
+Performs logical operations on various validation check functions
+
 
 * **Parameters**
 
-    
-    * **alert_result** – 
+    * **alert_result** – Result of each function
 
+    * **dataframe** – Dataframe containing the data on which the logical operation should happen
 
-    * **dataframe** – 
+    * **column** – Column on which the logical operation should happen
 
-
-    * **column** – 
-
-
-    * **value** – 
+    * **value** – Various validation check functions
 
 
 
 * **Returns**
 
-    
+    Returns Fail if the logical operation fails, Pass if the logical operation is passes
 
 
-#### is_boolean(df, column)
+
+#### is_boolean(dataframe, column)
 Checks if the datatype of the column is boolean
 
 
 * **Parameters**
 
-    
-    * **df** – Dataframe containing the column
-
+    * **dataframe** – Dataframe containing the column
 
     * **column** – Column to be checked if the datatype is boolean
 
@@ -240,20 +181,19 @@ Checks if the datatype of the column is boolean
 
 
 
-#### is_in_values(alert_result, df, column, values)
+#### is_in_values(alert_result, dataframe, column, values)
 Checks if the values provided are present in the input column
 
 
 * **Parameters**
 
-    
     * **alert_result** – Result of each function
 
-
-    * **df** – The input dataframe with all the data from input file
-
+    * **dataframe** – The input dataframe with all the data from input file
 
     * **column** – The column to check for in values
+
+    * **values** – The values used for comparison
 
 
 
@@ -263,15 +203,13 @@ Checks if the values provided are present in the input column
 
 
 
-#### is_integer(df, column)
+#### is_integer(dataframe, column)
 Checks if the datatype of the column is integer
 
 
 * **Parameters**
 
-    
-    * **df** – Dataframe containing the column
-
+    * **dataframe** – Dataframe containing the column
 
     * **column** – Column to be checked if the datatype is integer
 
@@ -283,15 +221,13 @@ Checks if the datatype of the column is integer
 
 
 
-#### is_not_boolean(df, column)
+#### is_not_boolean(dataframe, column)
 Checks if the datatype of the column is not boolean
 
 
 * **Parameters**
-
     
-    * **df** – Dataframe containing the column
-
+    * **dataframe** – Dataframe containing the column
 
     * **column** – Column to be checked if the datatype is not boolean
 
@@ -303,20 +239,19 @@ Checks if the datatype of the column is not boolean
 
 
 
-#### is_not_in_values(alert_result, df, column, values)
+#### is_not_in_values(alert_result, dataframe, column, values)
 Checks if the values provided are not present in the input column
 
 
 * **Parameters**
 
-    
     * **alert_result** – Result of each function
 
-
-    * **df** – The input dataframe with all the data from input file
-
+    * **dataframe** – The input dataframe with all the data from input file
 
     * **column** – The column to check for not in values
+
+    * **values** – The values used for comparison
 
 
 
@@ -326,15 +261,13 @@ Checks if the values provided are not present in the input column
 
 
 
-#### is_not_integer(df, column)
+#### is_not_integer(dataframe, column)
 Checks if the datatype of the column is not integer
 
 
 * **Parameters**
 
-    
-    * **df** – Dataframe containing the column
-
+    * **dataframe** – Dataframe containing the column
 
     * **column** – Column to be checked if the datatype is not integer
 
@@ -346,15 +279,13 @@ Checks if the datatype of the column is not integer
 
 
 
-#### is_not_null(df, column)
+#### is_not_null(dataframe, column)
 Checks if column has not null values in the data
 
 
 * **Parameters**
 
-    
-    * **df** – The input dataframe with all the data from input file
-
+    * **dataframe** – The input dataframe with all the data from input file
 
     * **column** – The column to be checked for not null values
 
@@ -366,15 +297,13 @@ Checks if column has not null values in the data
 
 
 
-#### is_not_unique(df, column)
+#### is_not_unique(dataframe, column)
 Checks for unique values in the column
 
 
 * **Parameters**
-
     
-    * **df** – The input dataframe with all the data from input file
-
+    * **dataframe** – The input dataframe with all the data from input file
 
     * **column** – The column to be checked for unique values
 
@@ -386,15 +315,13 @@ Checks for unique values in the column
 
 
 
-#### is_null(df, column)
+#### is_null(dataframe, column)
 Checks if column has null values in the data
 
 
 * **Parameters**
 
-    
-    * **df** – The input dataframe with all the data from input file
-
+    * **dataframe** – The input dataframe with all the data from input file
 
     * **column** – The column to be checked for null values
 
@@ -406,20 +333,19 @@ Checks if column has null values in the data
 
 
 
-#### is_null_percentage(alert_result, df, column, value)
+#### is_null_percentage(alert_result, dataframe, column, value)
 Checks for the percentage null values in comparison to the specified percentage
 
 
 * **Parameters**
-
-    
+   
     * **alert_result** – Result of each function
 
-
-    * **df** – The input dataframe with all the data from input file
-
+    * **dataframe** – The input dataframe with all the data from input file
 
     * **column** – The column to be checked for percentage of null values
+
+    * **value** – The percentage value to be compared
 
 
 
@@ -428,75 +354,14 @@ Checks for the percentage null values in comparison to the specified percentage
     Returns Fail if column does not satisfy the condition, Pass if column satisfies the condition
 
 
+>-----
+>#### is_null_percentage_where(alert_result, dataframe, column, value)
 
-#### is_null_percentage_where(alert_result, df, column, value)
+>#### is_null_where_percentage(alert_result, dataframe, column, value)
 
-* **Parameters**
+>#### only_null_where(alert_result, dataframe, column, value)
 
-    
-    * **alert_result** – 
-
-
-    * **df** – 
-
-
-    * **column** – 
-
-
-    * **value** – 
-
-
-
-* **Returns**
-
-    
-
-
-#### is_null_where_percentage(alert_result, df, column, value)
-
-* **Parameters**
-
-    
-    * **alert_result** – 
-
-
-    * **df** – 
-
-
-    * **column** – 
-
-
-    * **value** – 
-
-
-
-* **Returns**
-
-    
-
-
-#### only_null_where(alert_result, df, column, value)
-
-* **Parameters**
-
-    
-    * **alert_result** – 
-
-
-    * **df** – 
-
-
-    * **column** – 
-
-
-    * **value** – 
-
-
-
-* **Returns**
-
-    
-
+>------
 
 #### overall_alert_result_count(result)
 Counts the total number of fails in alert of validation
@@ -504,7 +369,7 @@ Counts the total number of fails in alert of validation
 
 * **Parameters**
 
-    **result** – Overall result i.e result after validation__pre and validation__post
+    * **result** – Overall result i.e result after validation__pre and validation__post
 
 
 
@@ -514,13 +379,15 @@ Counts the total number of fails in alert of validation
 
 
 
-#### required_input_columns(input, dataframe)
+#### required_input_columns(input_columns, dataframe)
 Checks whether the required_input_columns from jobspec are present in the input file dataframe or not
 
 
 * **Parameters**
 
-    **input** – List of the columns
+    * **input_columns** – List of the columns
+
+    * **dataframe** – The dataframe with all the columns from input file
 
 
 

@@ -5,29 +5,13 @@
 Bases: `object`
 
 
-#### cleanNullDict(dictionary)
-Cleans the null values in the dictionary
-
-
-* **Parameters**
-
-    **dictionary** – Input dictionary
-
-
-
-* **Returns**
-
-    Cleaned dictionary
-
-
-
 #### clean_file_name(input_file)
 Replaces special characters with underscores in the file name
 
 
 * **Parameters**
 
-    **input_file** – The name of the input file
+    * **input_file** – The name of the input file
 
 
 
@@ -37,20 +21,33 @@ Replaces special characters with underscores in the file name
 
 
 
+#### clean_null_dict(dictionary)
+Cleans the null values in the dictionary
+
+
+* **Parameters**
+
+    * **dictionary** – Input dictionary
+
+
+
+* **Returns**
+
+    Cleaned dictionary
+
+
+
 #### convert_df_to_dydf(dataframe, glueContext, DynamicFrame)
 Converts dataframe to aws glue dynamic dataframe
 
 
 * **Parameters**
-
     
     * **dataframe** – Input dataframe
 
+    * **glueContext** –  Used for writing DynamicFrame
 
-    * **glueContext** – 
-
-
-    * **DynamicFrame** – 
+    * **DynamicFrame** – Dataframe used in Glue
 
 
 
@@ -60,13 +57,16 @@ Converts dataframe to aws glue dynamic dataframe
 
 
 
-#### csv_file_delimiter(input_file_location, sc)
+#### csv_file_delimiter(input_file_location, registry)
 Identifies the delimiter of the csv file
+> Registry requirements: sparkcontext
 
 
 * **Parameters**
+    
+    * **input_file_location** – The location of the input file
 
-    **input_file_location** – The location of the input file
+    * **registry** – The registry with all job parameters
 
 
 
@@ -76,30 +76,11 @@ Identifies the delimiter of the csv file
 
 
 
-#### dict_to_str_final_result(type, value)
-Convert the dictionary to string
-
-
-* **Parameters**
-
-    
-    * **type** – 
-
-
-    * **value** – Input dictionary
-
-
-
-* **Returns**
-
-    
-
-
 #### extract_day(date)
 Extracts day from the date
 
 
-* **Return date.strftime(‘%d’)**
+* **Returns**
 
     Returns the day from the date
 
@@ -131,7 +112,9 @@ Checks if file exists in the provided s3 path
 
 * **Parameters**
 
-    **path** – The path of the input file to check if it exists or not
+    * **path** – The path of the input file to check if it exists or not
+
+    * **registry** – The registry with all the job parameters
 
 
 
@@ -147,7 +130,7 @@ Fetches the file name without the extension
 
 * **Parameters**
 
-    **input_file** – The name of the input file
+   *  **input_file** – The name of the input file
 
 
 
@@ -163,7 +146,7 @@ Fetches the file name with the extension
 
 * **Parameters**
 
-    **input_file** – The name of the input file
+    * **input_file** – The name of the input file
 
 
 
@@ -179,7 +162,7 @@ Fetches the file name with the extension
 
 * **Parameters**
 
-    **input_file** – The name of the input file
+    * **input_file** – The name of the input file
 
 
 
@@ -192,18 +175,16 @@ Fetches the file name with the extension
 #### get_file_path(filename, input_directory, registry, file_exist_date=None)
 Gets the complete file path of the file even if it is present back in time
 
+> Registry requirements: bucket, environment, customer_slug, current_date, limit
+
 
 * **Parameters**
 
-    
     * **filename** – Name of the file
-
 
     * **input_directory** – Source directory where we need to search for the file
 
-
     * **registry** – The registry with all the job parameters
-
 
     * **file_exist_date** – Date in which file is need to be lookup
 
@@ -216,12 +197,12 @@ Gets the complete file path of the file even if it is present back in time
 
 
 #### get_index_of_dict(dataframe, key)
+Identifies the index of the dataframe based on the name or alias of the dataframe
+
 
 * **Parameters**
-
-    
-    * **dataframe** – Input Dataframe
-
+  
+    * **dataframe** – Dataframe object
 
     * **key** – Key whose index we need to find
 
@@ -233,8 +214,14 @@ Gets the complete file path of the file even if it is present back in time
 
 
 
-#### get_proper_column_names(txt)
+#### get_proper_column_names(input_string)
 Converts the provided string to lowercase, accepts only a-z0-9 and underscores
+
+
+* **Parameters**
+
+    * **input_string** – A set of characters
+
 
 
 * **Returns**
@@ -246,16 +233,18 @@ Converts the provided string to lowercase, accepts only a-z0-9 and underscores
 #### is_dev_env(registry)
 Checks whether the environment is local or aws
 
+> Registry requirements: environment
+
 
 * **Parameters**
 
-    **registry** – The registry with all the job parameters
+    * **registry** – The registry with all the job parameters
 
 
 
 * **Returns**
 
-    True if envrionment is dev else False
+    True if environment is dev else False
 
 
 
@@ -265,30 +254,25 @@ Fetches the current timestamp
 
 * **Returns**
 
-    Returns the current time
+    Returns the current timestamp
 
 
 
-#### output_columns(input, dataframe, input_file_name, source_file_column, result)
+#### output_columns(list_of_columns, dataframe, input_file_name, source_file_column, result)
 Selects the output columns based on the instructions to process the output file
 
 
 * **Parameters**
-
-    
-    * **input** – list of columns for the output file
-
+ 
+    * **list_of_columns** – list of columns for the output file
 
     * **dataframe** – Dataframe object
 
-
     * **input_file_name** – Name of the input file
-
 
     * **source_file_column** – Name of the output file that you want to generate
 
-
-    * **result** – Overall validation results
+    * **result** – Overall results of job
 
 
 
@@ -298,13 +282,13 @@ Selects the output columns based on the instructions to process the output file
 
 
 
-#### output_columns_order(input)
+#### output_columns_order(dataframe)
 Gets the order of the columns in the dataframe
 
 
 * **Parameters**
 
-    **input** – Dataframe object
+    * **dataframe** – Dataframe object
 
 
 
@@ -320,11 +304,9 @@ Creates a new source file column in the dataframe with values as filename
 
 * **Parameters**
 
-    
     * **dataframe** – Dataframe object
 
-
-    * **input_file_name** – Input file name that is to be added on the source column
+    * **input_file_name** – File name that is to be added as value on the source column
 
 
 
@@ -339,10 +321,8 @@ Function to display the validations results in a tabulated  format
 
 
 * **Parameters**
-
-    
+   
     * **result** – Overall results after processing jobspec
-
 
     * **output_file** – Location of output file
 
@@ -370,7 +350,7 @@ Unions those dataframes which has the property of union
 
 * **Parameters**
 
-    **dataframes** – Input list of dataframes
+    * **dataframes** – Input list of dataframes
 
 
 
